@@ -41,11 +41,6 @@ You can check the [API](https://github.com/dresende/node-orm/wiki) for a more de
         // same as above...
     });
 
-This allows you to generate your own database objects that conform to the following postgres and mysql libraries:
-
- * Mysql: https://github.com/felixge/node-mysql
- * Postgres: https://github.com/brianc/node-postgres
-
 ## Defining a model
 
     var Person = db.define("person", {
@@ -124,9 +119,9 @@ If you want there's also this methods:
 
 Currently this module supports the following database types:
 
-1. MySQL
-2. PostgreSQL
-3. MongoDB (alpha)
+1. MySQL(via https://github.com/felixge/node-mysql)
+2. PostgreSQL (via https://github.com/brianc/node-postgres)
+3. MongoDB (alpha, via https://github.com/christkv/node-mongodb-native)
 
 ## Supported Types
 
