@@ -38,6 +38,7 @@ You can check the [API](https://github.com/dresende/node-orm/wiki) for a more de
         user: 'root',
         password: 'root'
     });
+
     orm.connect("mysql", client, function (success, db) {
         // same as above...
     });
@@ -62,7 +63,8 @@ You can check the [API](https://github.com/dresende/node-orm/wiki) for a more de
     // or just
     Person.hasOne("mother"); // defaults to same model
     
-    Person.hasMany("friends", Person, "friend"); // will create a table "person_friends" with 2 fields (person_id and friend_id)
+    // this will create "person_friends" table with "person_id" and "friend_id"
+    Person.hasMany("friends", Person, "friend");
 
 ## Creating the model on the database
 
