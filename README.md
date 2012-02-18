@@ -32,7 +32,7 @@ Node-ORM is a multi-database Object-Relational Mapping for NodeJS.
         // you can now use db variable to define models
     });
 
-## Connecting via raw database API
+## Connecting to a database via raw API
 
     var orm = require("orm");
     var mysql = require("mysql");
@@ -59,20 +59,11 @@ Node-ORM is a multi-database Object-Relational Mapping for NodeJS.
         }
     });
 
-## Adding associations
-
-    Person.hasOne("father", Person);
-    // or just
-    Person.hasOne("mother"); // defaults to same model
-    
-    // this will create "person_friends" table with "person_id" and "friend_id"
-    Person.hasMany("friends", Person, "friend");
-
-## Creating the model on the database
+## Creating a model
 
     Person.sync();
 
-## Creating and using a record
+## Using a model
 
     var John = new Person({
     	"name"		: "John",
@@ -81,7 +72,7 @@ Node-ORM is a multi-database Object-Relational Mapping for NodeJS.
     });
     console.log("Hello, my name is " + John.fullName() + " and I'm " + John.age + " years old");
 
-## Saving record to database
+## Saving a model
 
     John.save(function (err, JohnCopy) {
     	if (!err) {
@@ -91,6 +82,15 @@ Node-ORM is a multi-database Object-Relational Mapping for NodeJS.
     		console.dir(err);
     	}
     });
+
+## Adding associations
+
+    Person.hasOne("father", Person);
+    // or just
+    Person.hasOne("mother"); // defaults to same model
+    
+    // this will create "person_friends" table with "person_id" and "friend_id"
+    Person.hasMany("friends", Person, "friend");
 
 ## Changing associations
 
