@@ -20,7 +20,7 @@ Node-ORM is a multi-database Object-Relational Mapping for NodeJS.
 
 ## Connecting to a database
 
-You can check the [API](https://github.com/dresende/node-orm/wiki) for a more detailed overview.
+Check out [API](https://github.com/dresende/node-orm/wiki) for more.
 
     var orm = require("orm");
     var dsn = "mysql://username:password@hostname/database";
@@ -96,8 +96,6 @@ You can check the [API](https://github.com/dresende/node-orm/wiki) for a more de
 
 ## Changing associations
 
-I think an example is better to explain.
-
     John.setFather(Jeremy, function () {
     	John.setMother(Jane, function () {
     		John.addFriends(Jeremy, Jane, function () {
@@ -106,8 +104,6 @@ I think an example is better to explain.
     	});
     });
     
-If you want there's also this methods:
-
     John.getFather(function (JohnFather) {
     	console.log("John's father is " + JohnFather.name);
     });
