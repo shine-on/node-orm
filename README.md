@@ -130,7 +130,8 @@ Currently supported database types are:
 
 ## Supported data types
 
-This values are still just supported for .sync() (table creations), not for other instance operations like .save() (yet).
+Currently, following data types affect only .sync() method (i.e. CREATE TABLE).
+Others, like .save() method (i.e. UPDATE), does not perform any data type checks.
 
 <table>
 	<tr>
