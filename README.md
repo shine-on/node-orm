@@ -20,8 +20,6 @@ Node-ORM is a multi-database Object-Relational Mapping for NodeJS.
 
 ## Connecting to a database
 
-Check out [API](https://github.com/dresende/node-orm/wiki) for more.
-
     var orm = require("orm");
     var dsn = "mysql://username:password@hostname/database";
 
@@ -117,6 +115,10 @@ Check out [API](https://github.com/dresende/node-orm/wiki) for more.
     John.removeFriends(function () {
     	console.log("John has no friends now!");
     });
+
+## API
+
+Check out [API](https://github.com/dresende/node-orm/wiki) for more.
 
 ## Supported database types
 
