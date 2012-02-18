@@ -1,6 +1,10 @@
 NodeJS ORM
 ==========
 
+## Call for testers
+
+* please test-report configurable constraints on MySQL;
+
 ## About
 
 Node-ORM is a multi-database Object-Relational Mapping for NodeJS.
