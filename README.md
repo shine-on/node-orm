@@ -15,12 +15,14 @@ Install using NPM:
 
     npm install orm
 
-## Connecting to a Database (MySQL in the example)
+## Connecting to a database
 
 You can check the [API](https://github.com/dresende/node-orm/wiki) for a more detailed overview.
 
     var orm = require("orm");
-    orm.connect("mysql://username:password@hostname/database", function (success, db) {
+    var dsn = "mysql://username:password@hostname/database";
+
+    orm.connect(dsn, function (success, db) {
         if (!success) {
             console.log("Could not connect to database!");
             return;
@@ -117,11 +119,11 @@ If you want there's also this methods:
 
 ## Database Support
 
-Currently this module supports the following database types:
+Currently supported database types are:
 
-1. MySQL (via https://github.com/felixge/node-mysql)
-2. PostgreSQL (via https://github.com/brianc/node-postgres)
-3. MongoDB (alpha quality, via https://github.com/christkv/node-mongodb-native)
+* MySQL (via https://github.com/felixge/node-mysql)
+* PostgreSQL (via https://github.com/brianc/node-postgres)
+* MongoDB (alpha quality, via https://github.com/christkv/node-mongodb-native)
 
 ## Supported Types
 
