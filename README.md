@@ -3,15 +3,14 @@ NodeJS ORM
 
 ## About
 
-Node-ORM is a NodeJS module for multiple databases using Object-Relational Mapping with
-some cool features like validators and hooks. New features are added by suggestion issues
-or when I remember I need something. I make a strong effort not to change the API, but
-sometimes it can happen. If you don't want to get into trouble I suggest you to define
-your package.json (in project) to use a specific version of ORM (and not >= x.y.z).
+Node-ORM is a multi-database Object-Relational Mapping for NodeJS.
+
+## Features
+
+* validators;
+* beforeSave/afterSave hooks;
 
 ## Installing
-
-Install using NPM:
 
     npm install orm
 
@@ -117,7 +116,7 @@ If you want there's also this methods:
     	console.log("John has no friends now!");
     });
 
-## Database Support
+## Supported database types
 
 Currently supported database types are:
 
@@ -125,7 +124,7 @@ Currently supported database types are:
 * PostgreSQL (via https://github.com/brianc/node-postgres)
 * MongoDB (alpha quality, via https://github.com/christkv/node-mongodb-native)
 
-## Supported Types
+## Supported data types
 
 This values are still just supported for .sync() (table creations), not for other instance operations like .save() (yet).
 
